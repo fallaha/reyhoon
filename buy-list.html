@@ -20,8 +20,6 @@
             </div>
         </div>
     </header>
-
-
     <div class="user-specific" id="myHeader">
         <div class="user-specific-container">
             <div class="user-specific-container user-specific-container-right" id="ghazaal-navbar">
@@ -91,15 +89,14 @@
                                 قورمه سبزی
                             </div>
                             <div class="count">
-                                <div class="minus btn" onclick="change_count(this.parentElement,-1)">
-                                    -
+                                <div class="increase" onclick="increase_count(this)">
+                                    +
                                 </div>
                                 <div class="number">
                                     2
                                 </div>
-
-                                <div class="plus btn" onclick="change_count(this.parentElement,+1)">
-                                    +
+                                <div class="increase">
+                                    -
                                 </div>
                             </div>
                             <div class="price">
@@ -108,25 +105,23 @@
                         </div>
                         <div class="item">
                             <div class="title">
-                                خورشت قیمه
+                                قورمه سبزی
                             </div>
                             <div class="count">
-                                <div class="minus btn" onclick="change_count(this.parentElement,-1)">
-                                    -
+                                <div class="increase">
+                                    +
                                 </div>
                                 <div class="number">
                                     2
                                 </div>
-
-                                <div class="plus btn" onclick="change_count(this.parentElement,+1)">
-                                    +
+                                <div class="increase">
+                                    -
                                 </div>
                             </div>
                             <div class="price">
                                 ۷۲.۰۰۰
                             </div>
                         </div>
-
                     </div>
                     <div class="summary">
                         <div>
@@ -145,183 +140,85 @@
     </div>
 
     <div class="main">
-
-        <div class="slider">
-            <div class="slider-item">
-                <a href="#f1">
-                    <img src="asset/img/slider/1.jpg" alt="Image 01">
-                    <div class="text">پیتزا</div>
-                </a>
-            </div>
-            <div class="slider-item">
-                <a href="#f2">
-                    <img src="asset/img/slider/2.jpg" alt="Image 02">
-                    <div class="text">کباب و جوجه</div>
-                </a>
-            </div>
-            <div class="slider-item">
-                <img src="asset/img/slider/3.jpg" alt="Image 03">
-                <div class="text">خورشت</div>
-            </div>
-            <div class="slider-item">
-                <img src="asset/img/slider/4.jpg" alt="Image 04">
-                <div class="text">ساندویچ</div>
-            </div>
-            <div class="slider-item">
-                <img src="asset/img/slider/5.jpg" alt="Image 05">
-                <div class="text">پیش غذا</div>
-            </div>
-            <div class="slider-item">
-                <img src="asset/img/slider/6.jpg" alt="Image 06">
-                <div class="text">میان وعده</div>
-            </div>
-        </div>
-
-
-        <div class="foodscat">
-
-            <div class="foodcat-item" id="f1">
+        <div class="buy-list-large">
+            <div class="default-white-box buy-items">
                 <div class="title">
-                    پیتزا
+                    لیست خرید
                 </div>
                 <div class="items">
-                    <div class="food-item">
-                        <div class="food-item-image">
-                            <img src="asset/img/chicken-pizza.jpg" />
+                    <div class="item">
+                        <div class="name">
+                            قورمه سبزی
                         </div>
-                        <div class="food-item-content">
-                            <div class="food-item-title">
-                                پیتزا ایتالیایی دو نفره
+                        <div class="unit_price">
+                            13000 تومان
+                        </div>
+                        <div class="count">
+                            <div class="minus btn" onclick="change_count(this.parentElement,-1)">
+                                -
                             </div>
-                            <div class="food-item-desc">
-                                پیتزا دو نفره با شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی
+                            <div class="number">
+                                1
                             </div>
-                            <div class="food-item-cost">
-                                ۶۵.۰۰۰ تومان
-                            </div>
-                            <div class="food-item-buy" onclick="add_item_to_bascket(this)">
-                                افزودن به لیست خرید
+                            <div class="plus btn" onclick="change_count(this.parentElement,+1)">
+                                +
                             </div>
                         </div>
-                    </div>
-
-                    <div class="food-item">
-                        <div class="food-item-image">
-                            <img src="asset/img/chicken-pizza2.jpg" />
+                        <div class="price">
+                            13000 تومان
                         </div>
-                        <div class="food-item-content">
-                            <div class="food-item-title">
-                                پیتزا ایتالیایی دو نفره
-                            </div>
-                            <div class="food-item-desc">
-                                پیتزا دو نفره با شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی پیتزا دو نفره با
-                                شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی
-                            </div>
-                            <div class="food-item-cost">
-                                ۶۵.۰۰۰ تومان
-                            </div>
-                            <div class="food-item-buy">
-                                افزودن به لیست خرید
-                            </div>
+                        <div class="delete" onclick="delete_item_shop(this.parentElement)">
+                            حذف
                         </div>
                     </div>
 
-
-                </div>
-            </div>
-
-            <div class="foodcat-item" id="f2">
-                <div class="title">
-                    کباب و جوجه
-                </div>
-                <div class="items">
-                    <div class="food-item">
-                        <div class="food-item-image">
-                            <img src="asset/img/unnamed.jpg" />
+                    <div class="item">
+                        <div class="name">
+                            نوشابه (نارنجی)
                         </div>
-                        <div class="food-item-content">
-                            <div class="food-item-title">
-                                چلو کباب کوبیده
+                        <div class="unit_price">
+                            10000 تومان
+                        </div>
+                        <div class="count">
+                            <div class="minus btn" onclick="change_count(this.parentElement,-1)">
+                                -
                             </div>
-                            <div class="food-item-desc">
-                                پیتزا دو نفره با شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی
+                            <div class="number">
+                                1
                             </div>
-                            <div class="food-item-cost">
-                                ۶۵.۰۰۰ تومان
-                            </div>
-                            <div class="food-item-buy">
-                                افزودن به لیست خرید
+                            <div class="plus btn" onclick="change_count(this.parentElement,+1)">
+                                +
                             </div>
                         </div>
-                    </div>
-
-                    <div class="food-item">
-                        <div class="food-item-image">
-                            <img src="asset/img/iranwatching-1548-1599083552-joje-kabab.jpg" />
+                        <div class="price">
+                            10000 تومان
                         </div>
-                        <div class="food-item-content">
-                            <div class="food-item-title">
-                                جوجه کباب ۱۸ گرمی
-                            </div>
-                            <div class="food-item-desc">
-                                پیتزا دو نفره با شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی پیتزا دو نفره با
-                                شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی
-                            </div>
-                            <div class="food-item-cost">
-                                ۶۵.۰۰۰ تومان
-                            </div>
-                            <div class="food-item-buy">
-                                افزودن به لیست خرید
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item">
-                        <div class="food-item-image">
-                            <img src="asset/img/iranwatching-1548-1599083552-joje-kabab.jpg" />
-                        </div>
-                        <div class="food-item-content">
-                            <div class="food-item-title">
-                                جوجه کباب ۲۵ گرمی
-                            </div>
-                            <div class="food-item-desc">
-                                پیتزا دو نفره با شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی پیتزا دو نفره با
-                                شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی
-                            </div>
-                            <div class="food-item-cost">
-                                ۶۵.۰۰۰ تومان
-                            </div>
-                            <div class="food-item-buy">
-                                افزودن به لیست خرید
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item">
-                        <div class="food-item-image">
-                            <img src="asset/img/1200070_632.jpg" />
-                        </div>
-                        <div class="food-item-content">
-                            <div class="food-item-title">
-                                کباب بناب ساطوری
-                            </div>
-                            <div class="food-item-desc">
-                                پیتزا دو نفره با شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی پیتزا دو نفره با
-                                شعاع ۵۰ سانتی متر ۸ تیکه به همراه قارچ و لوازم جانبی
-                            </div>
-                            <div class="food-item-cost">
-                                ۶۵.۰۰۰ تومان
-                            </div>
-                            <div class="food-item-buy">
-                                افزودن به لیست خرید
-                            </div>
+                        <div class="delete" onclick="delete_item_shop(this.parentElement)">
+                            حذف
                         </div>
                     </div>
 
 
                 </div>
             </div>
+            <div class="default-white-box buy-summary">
+                <div class="summary">
+                    <div class="title">
+                        جمع سبد خرید
+                    </div>
+                    <div class="price">
+                        ۱۰۸.۰۰۰ هزار تومان
+                    </div>
+                </div>
 
+                <div class="disc">
+                    هزینه ارسال در ادامه بر اساس آدرس، زمان و نحوه ی ارسال انتخابی شما محاسبه و به این مبلغ اضافه خواهد شد
+                </div>
+                <div class="finish">
+                    تکمیل خرید
+                </div>
+                
+            </div>
         </div>
     </div>
 
@@ -355,17 +252,4 @@
 
 </body>
 <script src="script.js"></script>
-<script type="text/javascript" src="asset/js/flickity.pkgd.min.js"></script>
-<script type="text/javascript">
-    let element = document.querySelector('.slider');
-    let flicity_handler = new Flickity(element, {
-        contain: true,
-        textAlign: 'right',
-        rightToLeft: true,
-        pageDots: false,
-        groupCells: true
-    });
-
-</script>
-
 </html>
