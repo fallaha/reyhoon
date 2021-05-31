@@ -470,6 +470,7 @@ footer{
     height: 15px;
     border-radius: 3px;
     cursor: pointer;
+    border: 0px;
     background-color: #e8e8e8;
 }
 
@@ -483,6 +484,7 @@ footer{
     height: 22px;
     border-radius: 8px;
     cursor: pointer;
+    border: 0px;
     background-color: #e8e8e8;
 }
 
@@ -520,8 +522,12 @@ footer{
     background-color: #005aff;
     text-align: center;
     border-radius: 10px;
+    border: 0px;
     padding: 10px;
+    font-family: 'vazir';
+    cursor: pointer;
     color: white;
+    width: 100%;
 }
 
 a.anchor {

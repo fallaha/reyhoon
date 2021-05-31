@@ -77,10 +77,22 @@ function change_count(btn,count){
   let price = btn.parentElement.querySelector('.price');
   price.innerText = new_price + " تومان ";
 
-
+  let sum_price_element = document.querySelector(".buy-summary .summary .price");
+  let sum_price = 0;
+  let all_items = document.querySelectorAll(".buy-items .items .item");
+  all_items.forEach(a => {
+    sum_price += parseInt(a.getElementsByClassName("price")[0].innerText);
+  })
+  sum_price_element.innerText = sum_price + " تومان ";
 }
 
 function delete_item_shop(item){
+  removed_price = parseInt(item.getElementsByClassName("price")[0].innerText);
+
+  let sum_price_element = document.querySelector(".buy-summary .summary .price");
+  sum_price = parseInt(sum_price_element.innerText);
+  sum_price -= removed_price; 
+  sum_price_element.innerText = sum_price + " تومان ";
   item.remove();
 }
 
